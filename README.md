@@ -32,7 +32,7 @@ The installation can be completed by three steps:
 R CMD build copent-master
 ```
 * Install the package from the archive file in R
-##### Code Examples
+##### Code Example
 ```
 # Example for copent.r
 library(mnormt)
