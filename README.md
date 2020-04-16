@@ -29,7 +29,7 @@ The package can be install from CRAN directly:
 ```
 install.packages("copent")
 ```
-The installation can be done online with `install_github` function in the **devtools** package:
+The package can be installed from Github with `install_github` function in the **devtools** package:
 ```
 install.packages("devtools")
 install_github("majianthu/copent")
