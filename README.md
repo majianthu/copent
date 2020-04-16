@@ -31,10 +31,10 @@ The installation can be completed by three steps:
 ```
 R CMD build copent-master
 ```
-* Install the package from the archive file in R
+* Install the package from the archive file `copent_0.1.tar.gz` in R
 ##### Code Example
 ```
-# Example for copent.r
+# Example for library "copent"
 library(mnormt)
 library(copent)
 rho = 0.5
