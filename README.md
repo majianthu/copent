@@ -25,13 +25,19 @@ For more information, please refer to [1-3]. For more information in Chinese, pl
 
 #### Usage 
 ##### Install the package
-The installation can be completed by three steps:
-* Download the depository as .zip file and unzip the file into `copent-master` folder
-* Run the following command and get the archive file `copent_0.1.tar.gz` 
+##### Install the package
+The installation can be done online with `install_github` function in `devtools` package:
+```
+install.packages("devtools")
+install_github("majianthu/copent")
+```
+The installation can be also completed offline by three steps:
+1. Download the depository as .zip file and unzip the file into `copent-master` folder
+2. Run the following command and get the archive file `copent_0.1.tar.gz` 
 ```
 R CMD build copent-master
 ```
-* Install the package from the archive file `copent_0.1.tar.gz` in R
+3. Install the package from the archive file `copent_0.1.tar.gz` in R
 ##### Code Example
 ```
 # Example for library "copent"
