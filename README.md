@@ -25,7 +25,7 @@ For more information, please refer to [1-3]. For more information in Chinese, pl
 
 #### Usage 
 ##### Install the package
-The installation can be done online with `install_github` function in **devtools** package:
+The installation can be done online with `install_github` function in the **devtools** package:
 ```
 install.packages("devtools")
 install_github("majianthu/copent")
