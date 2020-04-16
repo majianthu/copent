@@ -25,6 +25,10 @@ For more information, please refer to [1-3]. For more information in Chinese, pl
 
 #### Usage 
 ##### Install the package
+The package can be install from CRAN directly:
+```
+install.packages("copent")
+```
 The installation can be done online with `install_github` function in the **devtools** package:
 ```
 install.packages("devtools")
