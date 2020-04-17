@@ -31,7 +31,6 @@ install.packages("copent")
 ```
 The package can be installed from Github with `install_github` function in the **devtools** package:
 ```
-install.packages("devtools")
 install_github("majianthu/copent")
 ```
 The installation can also be completed offline by three steps:
@@ -57,3 +56,5 @@ ce1 = copent(x)
 2. Ma Jian. Variable Selection with Copula Entropy. arXiv preprint arXiv:1910.12389, 2019.
 
 3. Ma Jian. Estimating Transfer Entropy via Copula Entropy. arXiv preprint arXiv:1910.04375, 2019.
+#### License
+GPL (>=2)
