@@ -1,5 +1,6 @@
+[![CRAN](https://www.r-pkg.org/badges/version/copent)](https://cran.r-project.org/package=copent) [![CRAN](https://cranlogs.r-pkg.org/badges/copent)](https://cran.r-project.org/package=copent)
 # copent
-R package for Estimating Copula Entropy
+R package for Estimating Copula Entropy 
 
 #### Introduction
 Copula Entropy is a mathematical concept for statistical independence measurement [1]. In bivariate case, Copula Entropy is proved to be equivalent to Mutual Information. Different from Pearson Correlation Coefficient, Copula Entropy is defined for non-linear, high-order and multivariate cases, which makes it universally applicable.
