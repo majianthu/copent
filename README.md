@@ -1,4 +1,4 @@
-[![CRAN](https://www.r-pkg.org/badges/version/copent)](https://cran.r-project.org/package=copent) [![CRAN](https://cranlogs.r-pkg.org/badges/copent)](https://cran.r-project.org/package=copent)
+[![CRAN](https://www.r-pkg.org/badges/version/copent)](https://cran.r-project.org/package=copent) [![CRAN](https://cranlogs.r-pkg.org/badges/grand-total/copent)](https://cran.r-project.org/package=copent)
 # copent
 R package for Estimating Copula Entropy 
 
