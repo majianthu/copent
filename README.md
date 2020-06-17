@@ -15,7 +15,7 @@ It enjoys wide applications, including but not limited to：
 
 This algorithm composes of two steps: estimating empirical copula density with rank statistics and estimating copula entropy from the estimated empirical copula density with kNN method. Since both steps are with non-parametric methods, the copent algorithm can be applied to any cases without making assumptions.
 
-For more information, please refer to [1-3]. For more information in Chinese, please follow [this link](http://blog.sciencenet.cn/blog-3018268-978326.html).
+An preprint paper on the copent package is [available](https://arxiv.org/abs/2005.14025) on arXiv. For more information, please refer to [1-3]. For more information in Chinese, please follow [this link](http://blog.sciencenet.cn/blog-3018268-978326.html).
 
 #### Functions
 * copent -- main function;
@@ -57,5 +57,7 @@ ce1 = copent(x)
 2. Ma Jian. Variable Selection with Copula Entropy. arXiv preprint arXiv:1910.12389, 2019.
 
 3. Ma Jian. Estimating Transfer Entropy via Copula Entropy. arXiv preprint arXiv:1910.04375, 2019.
+
+4. Ma Jian. copent: Estimating Copula Entropy in R. arXiv Preprint arXiv:2005.14025, 2020.
 #### License
 GPL (>=2)
