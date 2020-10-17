@@ -42,6 +42,7 @@ R CMD build copent-master
 ```
 3. Install the package from the archive file `copent_0.1.tar.gz` in R
 ##### Code Example
+###### Example 1. Estimating copula entropy of bivariate Gaussian rvs.
 ```
 # Example for library "copent"
 library(mnormt)
@@ -50,6 +51,24 @@ rho = 0.5
 sigma = matrix(c(1,rho,rho,1),2,2)
 x = rmnorm(500,c(0,0),sigma)
 ce1 = copent(x)
+```
+###### Example 2. Estimating transfer entropy.
+Here transfer entropy is estimated via three copula entropy terms. More information on this example, please refer to [4].
+```
+library(copent)
+prsa2010data = read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/00381/PRSA_data_2010.1.1-2014.12.31.csv")
+data = prsa2010data[2200:2700,c(6,9)]
+tslag = 0
+for (lag in 1:24){
+  pm25a = data[1:(501-lag),1]
+  pm25b = data[(lag+1):501,1]
+  v1 = data[1:(501-lag),2]
+  data1 = cbind(pm25a, pm25b, v1)
+  tslag[lag] = copent(data1) - copent(data1[,c(1,2)]) - copent(data1[,c(1,3)]) 
+}
+x11()
+plot(tslag, xlab = "lag (hours)", ylab = "Transfer Entropy", main = "Pressure")
+lines(tslag)
 ```
 #### References
 1. Ma Jian, Sun Zengqi. Mutual information is copula entropy. Tsinghua Science & Technology, 2011, 16(1): 51-54. See also arXiv preprint, arXiv:0808.0845, 2008.
