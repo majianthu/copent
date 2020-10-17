@@ -41,7 +41,7 @@ The installation can also be completed offline by three steps:
 R CMD build copent-master
 ```
 3. Install the package from the archive file `copent_0.1.tar.gz` in R
-##### Code Example
+##### Code Examples
 ###### Example 1. Estimating copula entropy of bivariate Gaussian rvs.
 ```
 # Example for library "copent"
