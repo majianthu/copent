@@ -53,7 +53,7 @@ x = rmnorm(500,c(0,0),sigma)
 ce1 = copent(x)
 ```
 ###### Example 2. Estimating transfer entropy.
-Here transfer entropy is estimated via three copula entropy terms. More information on this example, please refer to [4].
+The data used in this example is the UCI Beijing PM2.5 data which include the PM2.5 and meterological factors obeservations in Beijing. The aim of the example is to infere the casuality from meterological factor (pressure) to PM2.5 from this obeservational data by estimating transfer entropy. Here transfer entropy is estimated via three copula entropy terms. More information on this example, please refer to [4].
 ```
 library(copent)
 prsa2010data = read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/00381/PRSA_data_2010.1.1-2014.12.31.csv")
