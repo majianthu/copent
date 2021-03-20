@@ -10,9 +10,9 @@ It enjoys wide applications, including but not limited to：
 * Variable Selection [2];
 * Causal Discovery (Estimating Transfer Entropy) [3].
 
-The nonparametric methods for estimating copula entropy and transfer entropy are implemented. The method for estimating copula entropy composes of two simple steps: estimating empirical copula by rank statistic and estimating copula entropy with kNN method. 
+The nonparametric methods for estimating copula entropy and transfer entropy are implemented. The method for estimating copula entropy composes of two simple steps: estimating empirical copula by rank statistic and estimating copula entropy with kth-Nearest-Neighbour method. 
 
-The method for estimating transfer entropy composes of two steps: estimating three copula entropy terms and then calculate transfer entropy from the estimated copula entropies. 
+The method for estimating transfer entropy composes of two steps: estimating three copula entropy terms and then calculate transfer entropy from the estimated copula entropy terms. 
 
 An preprint paper on the copent package is [available](https://arxiv.org/abs/2005.14025) on arXiv. For more information, please refer to [1-3]. For more information in Chinese, please follow [this link](http://blog.sciencenet.cn/blog-3018268-978326.html).
 
