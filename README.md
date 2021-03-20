@@ -31,15 +31,9 @@ install.packages("copent")
 ```
 The package can be installed from Github with `install_github` function in the **devtools** package:
 ```
-install_github("majianthu/copent")
+devtools::install_github("majianthu/copent")
 ```
-The installation can also be completed offline by three steps:
-1. Download the depository as .zip file and unzip the file into `copent-master` folder
-2. Run the following command and get the archive file `copent_0.1.tar.gz` 
-```
-R CMD build copent-master
-```
-3. Install the package from the archive file `copent_0.1.tar.gz` in R
+
 ##### Code Examples
 ###### Example 1. Estimating copula entropy of bivariate Gaussian rvs.
 ```
