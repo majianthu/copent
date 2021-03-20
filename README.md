@@ -6,11 +6,8 @@ R package for Estimating Copula Entropy and Transfer Entropy
 Copula Entropy is a mathematical concept for statistical independence measurement [1]. In bivariate case, Copula Entropy is proved to be equivalent to Mutual Information. Different from Pearson Correlation Coefficient, Copula Entropy is defined for non-linear, high-order and multivariate cases, which makes it universally applicable.
 
 It enjoys wide applications, including but not limited to：
-
 * Structure Learning;
-
 * Variable Selection [2];
-
 * Causal Discovery (Estimating Transfer Entropy) [3].
 
 The nonparametric methods for estimating copula entropy and transfer entropy are implemented. The method for estimating copula entropy composes of two simple steps: estimating empirical copula by rank statistic and estimating copula entropy with kNN method. 
@@ -72,11 +69,8 @@ lines(te1)
 ```
 #### References
 1. Ma Jian, Sun Zengqi. Mutual information is copula entropy. Tsinghua Science & Technology, 2011, 16(1): 51-54. See also arXiv preprint, arXiv:0808.0845, 2008.
-
 2. Ma Jian. Variable Selection with Copula Entropy. arXiv preprint arXiv:1910.12389, 2019.
-
 3. Ma Jian. Estimating Transfer Entropy via Copula Entropy. arXiv preprint arXiv:1910.04375, 2019.
-
 4. Ma Jian. copent: Estimating Copula Entropy in R. arXiv Preprint arXiv:2005.14025, 2020.
 #### License
 GPL (>=2)
