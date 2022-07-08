@@ -36,7 +36,7 @@ devtools::install_github("majianthu/copent")
 
 ##### Code Examples
 ###### Example 1. Estimating copula entropy of bivariate Gaussian rvs.
-```
+```r
 # Example for library "copent"
 library(mnormt)
 library(copent)
@@ -47,7 +47,7 @@ ce1 = copent(x)
 ```
 ###### Example 2. Estimating transfer entropy.
 The data used in this example is the UCI Beijing PM2.5 data which include the PM2.5 and meterological factors obeservations in Beijing. The aim of the example is to infere the casuality from meterological factor (pressure) to PM2.5 from this obeservational data by estimating transfer entropy. Here transfer entropy is estimated via three copula entropy terms. More information on this example, please refer to [4].
-```
+```r
 library(copent) 
 dir = "https://archive.ics.uci.edu/ml/machine-learning-databases/00381/"
 data = read.csv(paste(dir,"PRSA_data_2010.1.1-2014.12.31.csv",sep=""))
