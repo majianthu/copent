@@ -1,2 +1,2 @@
-importFrom("stats", "dist")
-export(copent, entknn, construct_empirical_copula, ci, transent)
+importFrom("stats", "dist", "runif", "cov")
+export(copent, entknn, construct_empirical_copula, ci, transent, mvnt)
