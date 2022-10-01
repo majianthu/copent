@@ -1,6 +1,6 @@
 \name{copent}
 \alias{copent}
-\title{ Estimating Copula Entropy }
+\title{ Estimating copula entropy }
 \description{
 
 Estimating copula entropy nonparametrically.
@@ -30,7 +30,7 @@ The function returns \emph{negative} value of copula entropy of data \bold{x}.
 }
 \references{ 
 
-Ma, J., & Sun, Z. (2011). Mutual information is copula entropy. \emph{Tsinghua Science & Technology}, \bold{16}(1): 51-54. See also \emph{ArXiv preprint}, arXiv: 0808.0845, 2008.
+Ma, J., & Sun, Z. (2011). Mutual information is copula entropy. \emph{Tsinghua Science & Technology}, \bold{16}(1): 51-54. See also arXiv preprint arXiv:0808.0845, 2008.
 
 Kraskov, A., St\"ogbauer, H., & Grassberger, P. (2004). Estimating Mutual Information. \emph{Physical Review E}, \bold{69}(6), 66138.
 

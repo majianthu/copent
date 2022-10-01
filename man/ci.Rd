@@ -3,7 +3,7 @@
 \title{ Conditional independence test with copula entropy }
 \description{
 
-Testing conditional independence between (x,y) conditioned on z with copula entropy.
+Testing conditional independence between (x,y) conditional on z with copula entropy.
 
 }
 \usage{
@@ -18,7 +18,7 @@ ci(x,y,z,k=3,dt=2)
 }
 \details{
 
-This program involves testing conditional independence between (\bold{x,y}) conditioned on \bold{z} with copula entropy nonparametrically. It was proposed in Ma (2019). 
+This program involves testing conditional independence between (\bold{x,y}) conditional on \bold{z} with copula entropy nonparametrically. It was proposed in Ma (2019). 
 
 The algorithm composes of two simple steps: estimating three copula entropy terms with \code{\link{copent}} and then calculate the test statistic.
 
@@ -30,7 +30,7 @@ The function returns the value of the test statistic of conditional independence
 }
 \references{ 
 
-Ma, Jian. Estimating Transfer Entropy via Copula Entropy. arXiv preprint arXiv:1910.04375 (2019).
+Ma, Jian. Estimating Transfer Entropy via Copula Entropy. arXiv preprint arXiv:1910.04375, 2019.
 
 }
 
