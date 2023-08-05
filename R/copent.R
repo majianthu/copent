@@ -1,13 +1,15 @@
 ##################################################################################
 ###  Estimating Copula Entropy and Transfer Entropy
-###  2022-10-01
+###  2023-08-05
 ###  by MA Jian (Email: majian03@gmail.com)
 ###
 ###  Parameters
-###   x		: N * d data, N samples, d dimensions
-###   k 	: kth nearest neighbour, parameter for kNN entropy estimation 
+###   x	: N * d data, N samples, d dimensions
+###   k	: kth nearest neighbour, parameter for kNN entropy estimation 
 ###   dt	: distance type [1: 'Euclidean', others: 'Maximum distance']
 ###   lag	: time lag
+###   s0,s1	: two samples with same dimension
+###   n	: repeat time of estimation
 ###
 ###  References
 ###  [1] Jian Ma and Zengqi Sun. Mutual information is copula entropy. 
@@ -18,6 +20,8 @@
 ###      arXiv preprint arXiv:1910.04375, 2019.
 ###  [4] Jian Ma. Multivariate Normality Test with Copula Entropy.
 ###      arXiv preprint arXiv:2206.05956, 2022.
+###  [5] Ma, Jian. Two-Sample Test with Copula Entropy.
+###      arXiv preprint arXiv:2307.07247, 2023.
 ##################################################################################
 copent<-function(x,k=3,dt=2){
   xc = construct_empirical_copula(x)
@@ -85,3 +89,17 @@ transent<-function(x,y,lag=1,k=3,dt=2){
 mvnt<-function(x,k=3,dt=2){
   - 0.5 * log( det(cov(x)) ) - copent(x,k,dt)
 }
+
+tst<-function(s0,s1,n=12,k=3,dt=2){
+  n0 = dim(s0)[1]
+  n1 = dim(s1)[1]
+  x = rbind(s0,s1)
+  result = 0
+  for(i in 1:n){
+    y1 = c(rep(1,n0),rep(2,n1)) + runif(n0+n1, max = 0.0000001)
+    y0 = c(rep(1,n0+n1)) + runif(n0+n1,max = 0.0000001)
+    result = result + copent(cbind(x,y1),k,dt) - copent(cbind(x,y0),k,dt)
+  }
+  result/n
+}
+
