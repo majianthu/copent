@@ -13,7 +13,7 @@
 ###   thd : threshold for the statistic of two-sample test
 ###   maxp : maximum number of change points
 ###   minseglen : minmum length of binary segmentation in change point detection
-###   ncores : the number of cores used for parallel computing
+###   ncores : number of cores used for parallel computing
 ###
 ###  References
 ###  [1] Jian Ma and Zengqi Sun. Mutual information is copula entropy. 
