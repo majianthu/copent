@@ -1,6 +1,6 @@
 ##################################################################################
 ###  Estimating Copula Entropy and Transfer Entropy
-###  2023-08-05
+###  2024-06-08
 ###  by MA Jian (Email: majian03@gmail.com)
 ###
 ###  Parameters
@@ -10,6 +10,10 @@
 ###   lag	: time lag
 ###   s0,s1	: two samples with same dimension
 ###   n	: repeat time of estimation
+###   thd : threshold for the statistic of two-sample test
+###   maxp : maximum number of change points
+###   minseglen : minmum length of binary segmentation in change point detection
+###   ncores : the number of cores used for parallel computing
 ###
 ###  References
 ###  [1] Jian Ma and Zengqi Sun. Mutual information is copula entropy. 
@@ -22,6 +26,8 @@
 ###      arXiv preprint arXiv:2206.05956, 2022.
 ###  [5] Ma, Jian. Two-Sample Test with Copula Entropy.
 ###      arXiv preprint arXiv:2307.07247, 2023.
+###  [6] Ma, Jian. Change Point Detection with Copula Entropy based Two-Sample Test
+###      arXiv preprint arXiv:2403.07892, 2024.
 ##################################################################################
 copent<-function(x,k=3,dt=2){
   xc = construct_empirical_copula(x)
@@ -101,5 +107,49 @@ tst<-function(s0,s1,n=12,k=3,dt=2){
     result = result + copent(cbind(x,y1),k,dt) - copent(cbind(x,y0),k,dt)
   }
   result/n
+}
+
+cpd <- function(x,thd=0.13,n=15,k=3,dt=2,ncores=0){
+  x = as.matrix(x)
+  len1 = dim(x)[1]
+  stat1 = 0
+  if(ncores == 0){nc = detectCores()}
+  else{nc = ncores}
+  cl = makeCluster(nc)
+  stat1 = parLapply(
+    cl,
+    2:(len1-2),
+    function(i){s0 = as.matrix(x[1:i,]); s1 = as.matrix(x[(i+1):len1,]); tst(s0,s1,n,k,dt)}
+  )
+  stopCluster(cl)
+  stat1 = c(0,unlist(stat1))
+  result = {}
+  if(max(stat1)>thd){
+    result$stats = stat1
+    result$maxstat = max(stat1)
+    result$pos = which(stat1 == max(stat1))+1
+  }
+  return(result)
+}
+
+mcpd <- function(x,maxp=5,thd=0.13,minseglen=10,n=15,k=3,dt=2,ncores=0){
+  mresult = {}
+  x = as.matrix(x)
+  len1 = dim(x)[1]
+  bisegs = matrix(c(1,len1-1),1,2)
+  k = 1
+  for(i in 1:maxp){
+    if(i>dim(bisegs)[1]){ break } 
+    ri = cpd(x[bisegs[i,1]:bisegs[i,2],],thd,n,k,dt,ncores)
+    if(!is.null(ri)){
+      ri$pos = ri$pos + bisegs[i,1] - 1
+      mresult$maxstat[k] = ri$maxstat
+      mresult$pos[k] = ri$pos
+      k = k + 1
+      if((ri$pos-bisegs[i,1])>minseglen) { bisegs = rbind(bisegs,c(bisegs[i,1],ri$pos-1)) }
+      if((bisegs[i,2]-ri$pos+1)>minseglen) { bisegs = rbind(bisegs,c(ri$pos,bisegs[i,2])) }
+    }
+  }
+  return(mresult)
 }
 
