@@ -1,15 +1,14 @@
 Package: copent
-Version: 0.4
-Date: 2023-08-05
+Version: 0.5
+Date: 2024-06-08
 Title: Estimating Copula Entropy and Transfer Entropy
-Authors@R: c(person("MA Jian", role = c("aut", "cre"),
-		email = "majian03@gmail.com"))
+Authors@R: c(person("MA Jian", role = c("aut", "cre"), email = "majian03@gmail.com"))
 Author: MA Jian [aut, cre]
 Maintainer: MA Jian <majian03@gmail.com>
 Depends: R (>= 2.7.0)
-Imports: stats
+Imports: stats, parallel
 Suggests: mnormt
-Description: The nonparametric methods for estimating copula entropy, transfer entropy, and the statistics for multivariate normality test and two-sample test are implemented. The methods for estimating transfer entropy and the statistics for multivariate normality test and two-sample test are based on the method for estimating copula entropy. Please refer to Ma and Sun (2011) <doi:10.1016/S1007-0214(11)70008-6>, Ma (2019) <arXiv:1910.04375>, Ma (2022) <arXiv:2206.05956>, and Ma (2023) <arXiv:2307.07247> for more information.
+Description: The nonparametric methods for estimating copula entropy, transfer entropy, and the statistics for multivariate normality test and two-sample test are implemented. The methods for estimating transfer entropy and the statistics for multivariate normality test and two-sample test are based on the method for estimating copula entropy. The method for change point detection with copula entropy based two-sample test is also implemented. Please refer to Ma and Sun (2011) <doi:10.1016/S1007-0214(11)70008-6>, Ma (2019) <arXiv:1910.04375>, Ma (2022) <arXiv:2206.05956>, Ma (2023) <arXiv:2307.07247>, and Ma (2024) <arXiv:2403.07892> for more information.
 License: GPL (>= 2)
 URL: https://github.com/majianthu/copent
 
