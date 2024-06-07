@@ -97,7 +97,7 @@ tst(s0,s1)
 ```r
 library(copent)
 library(mnormt)
-rho1 = 0.2; rho2 = 0.8; rho3 = 0.1; rho4 = 0.9; n1 = 10
+rho1 = 0.2; n1 = 20
 x1 = rmnorm(n1,c(0,0),matrix(c(1,rho1,rho1,1),2,2))
 x2 = rmnorm(n1,c(10,10),matrix(c(1,rho1,rho1,1),2,2))
 x3 = rmnorm(n1,c(5,5),matrix(c(1,rho1,rho1,1),2,2))
