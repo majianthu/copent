@@ -1,2 +1,3 @@
 importFrom("stats", "dist", "runif", "cov")
-export(copent, entknn, construct_empirical_copula, ci, transent, mvnt, tst)
+importFrom("parallel", "detectCores", "makeCluster", "parLapply", "stopCluster")
+export(copent, entknn, construct_empirical_copula, ci, transent, mvnt, tst, cpd, mcpd)
