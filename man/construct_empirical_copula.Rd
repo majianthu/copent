@@ -10,7 +10,7 @@ Construct empirical copula by rank statistic.
 construct_empirical_copula(x)
 }
 \arguments{
-  \item{x}{ the data with each row as a sample.}
+  \item{x}{ the data with each row as a sample}
 }
 \details{
 

@@ -10,11 +10,11 @@ Testing conditional independence between (x,y) conditional on z with copula entr
 ci(x,y,z,k=3,dt=2)
 }
 \arguments{
-  \item{x}{ the data with 1 row.}
-  \item{y}{ the data with 1 row.}
-  \item{z}{ the data with 1 row.}
-  \item{k}{ kth nearest neighbour, default = 3.}
-  \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance.}
+  \item{x}{ the data with 1 row}
+  \item{y}{ the data with 1 row}
+  \item{z}{ the data with 1 row}
+  \item{k}{ kth nearest neighbour, default = 3}
+  \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance}
 }
 \details{
 

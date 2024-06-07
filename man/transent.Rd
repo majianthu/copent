@@ -10,11 +10,11 @@ Estimating transfer entropy via copula entropy nonparametrically.
 transent(x,y,lag=1,k=3,dt=2)
 }
 \arguments{
-  \item{x}{ the data with 1 row.}
-  \item{y}{ the data with 1 row.}
+  \item{x}{ the data with 1 row}
+  \item{y}{ the data with 1 row}
   \item{lag}{ time lag, >0}
-  \item{k}{ kth nearest neighbour, default = 3.}
-  \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance.}
+  \item{k}{ kth nearest neighbour, default = 3}
+  \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance}
 }
 \details{
 

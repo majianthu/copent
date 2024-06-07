@@ -10,16 +10,16 @@ Estimating the statistic for testing multivariate normality based on copula entr
 mvnt(x,k=3,dt=2)
 }
 \arguments{
-  \item{x}{ the data with each row as a sample.}
-  \item{k}{ kth nearest neighbour, default = 3.}
-  \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance.}
+  \item{x}{ the data with each row as a sample of d-dimensional random variables}
+  \item{k}{ kth nearest neighbour, default = 3}
+  \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance}
 }
 \details{
 
 This program involves estimating the statistic for testing multivariate normality based on copula entropy. It was proposed in Ma (2022). The test statistic is defined as the difference between the
 copula entropies of unknown distribution and the Gaussian distribution with same covariance.
 
-The argument \bold{x} is for the data with each row as a sample from random variables. The argument \bold{k} and \bold{dt} is used in the kNN method for estimating entropy. \bold{k} is for the kth nearest neighbour (default = 3) and \bold{dt} is for the type of distance between samples which has currently two value options (1 for Eclidean distance, and 2(default) for Maximum distance).
+The argument \bold{x} is for the data with each row as a sample of d-dimensional random variables. The argument \bold{k} and \bold{dt} is used in the kNN method for estimating entropy. \bold{k} is for the kth nearest neighbour (default = 3) and \bold{dt} is for the type of distance between samples which has currently two value options (1 for Eclidean distance, and 2(default) for Maximum distance).
 
 }
 \value{

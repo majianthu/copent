@@ -10,9 +10,9 @@ Estimating copula entropy nonparametrically.
 copent(x,k=3,dt=2)
 }
 \arguments{
-  \item{x}{ the data with each row as a sample.}
-  \item{k}{ kth nearest neighbour, default = 3.}
-  \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance.}
+  \item{x}{ the data with each row as a sample}
+  \item{k}{ kth nearest neighbour, default = 3}
+  \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance}
 }
 \details{
 

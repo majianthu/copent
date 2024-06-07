@@ -10,9 +10,9 @@ Estimating entropy from data with kNN method.
 entknn(x,k=3,dt=2)
 }
 \arguments{
-  \item{x}{ the data with each row as a sample.}
-  \item{k}{ kth nearest neighbour, default = 3.}
-  \item{dt}{ the type of distance between samples, = 1 for Eclidean distance; other for Maximum distance.}
+  \item{x}{ the data with each row as a sample}
+  \item{k}{ kth nearest neighbour, default = 3}
+  \item{dt}{ the type of distance between samples, = 1 for Eclidean distance; other for Maximum distance}
 }
 \details{
 
