@@ -26,7 +26,7 @@
 ###      arXiv preprint arXiv:2206.05956, 2022.
 ###  [5] Ma, Jian. Two-Sample Test with Copula Entropy.
 ###      arXiv preprint arXiv:2307.07247, 2023.
-###  [6] Ma, Jian. Change Point Detection with Copula Entropy based Two-Sample Test
+###  [6] Ma, Jian. Change Point Detection with Copula Entropy based Two-Sample Test.
 ###      arXiv preprint arXiv:2403.07892, 2024.
 ##################################################################################
 copent<-function(x,k=3,dt=2){
