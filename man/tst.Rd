@@ -11,7 +11,7 @@ tst(s0,s1,n=12,k=3,dt=2)
 }
 \arguments{
   \item{s0,s1}{ two samples with each row as a sample of d-dimensional random variables}
-  \item{n}{ repeat time of estimation to reduce estimation bias}
+  \item{n}{ repeat time of estimation to reduce estimation bias, default = 12}
   \item{k}{ kth nearest neighbour, default = 3}
   \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance}
 }

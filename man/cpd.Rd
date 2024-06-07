@@ -10,12 +10,12 @@ Single change point detection with copula entropy based two-sample test.
 cpd(x,thd=0.13,n=15,k=3,dt=2,ncores=0)
 }
 \arguments{
-  \item{x}{ the data with each row as a sample of d-dimensional random variables}
-  \item{thd}{ the threshold of the statistic of two-sample test for detecting a change point, default = 0.13}
+  \item{x}{ data with each row as a sample of d-dimensional random variables}
+  \item{thd}{ threshold of the statistic of two-sample test for detecting a change point, default = 0.13}
   \item{n}{ the argument used by two-sample test, default = 15}
   \item{k}{ kth nearest neighbour, default = 3}
   \item{dt}{ the type of distance between samples, 1 for Eclidean distance; 2 for Maximum distance. default = 2}
-  \item{ncores}{ the number of cores to be used for parallel computing, default = 0 for all the cores}
+  \item{ncores}{ number of cores to be used for parallel computing, default = 0 for all the cores}
 }
 \details{
 
